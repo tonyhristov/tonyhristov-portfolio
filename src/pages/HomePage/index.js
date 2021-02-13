@@ -1,10 +1,11 @@
-import { React } from 'react'
+import React from 'react'
+import PageLayout from '../../components/page-layout'
 
 const HomePage = () => {
    return (
-      <div>
-         <h1>dhfdksjfkjl</h1>
-      </div>
+      <PageLayout>
+         <div></div>
+      </PageLayout>
    )
 }
 

@@ -1,10 +1,10 @@
-.h {
-   background-image: linear-gradient(to right);
+.navigation {
+   overflow: hidden;
+   background-color: #333;
+   background-image: linear-gradient(to right, rgb(47, 0, 255), #06f0c9);
 }
 
-.t {
-   text-transform: uppercase;
-   background: linear-gradient(to right, #30cfd0 0%, #330867 100%);
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
+.header-links {
+   display: block;
+   margin-left: 60px;
 }

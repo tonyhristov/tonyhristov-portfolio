@@ -1,0 +1,14 @@
+/* header */
+.header-list-item {
+   float: left;
+   color: #f2f2f2;
+   text-align: center;
+   margin: 33px 118px;
+   text-decoration: none;
+   font-size: 25px;
+}
+.header-list-item:hover {
+   -webkit-transform: scale(1.5);
+   -ms-transform: scale(1.5);
+   transform: scale(1.5);
+}
