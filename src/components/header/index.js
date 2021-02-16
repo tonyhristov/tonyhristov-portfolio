@@ -1,4 +1,4 @@
-import { React } from 'react'
+import React from 'react'
 import LinkComponent from '../link'
 import getLinks from '../../utils/navigation'
 import styles from './index.module.css'
