@@ -7,8 +7,8 @@ const Aside = () => {
    const links = getLinks
 
    return (
-      <header className={styles.navigation}>
-         <div className={styles['header-links']}>
+      <aside className={styles.navigation}>
+         <div className={styles['aside-links']}>
             {links.map((navElement) => {
                return (
                   <LinkComponent
@@ -20,7 +20,7 @@ const Aside = () => {
                )
             })}
          </div>
-      </header>
+      </aside>
    )
 }
 
