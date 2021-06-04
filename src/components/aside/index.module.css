@@ -2,9 +2,10 @@
    overflow: hidden;
    background-color: #333;
    background-image: linear-gradient(to top, rgb(47, 0, 255), #06f0c9);
-   width: 10%;
+   width: 15%;
+   height: 100vh;
 }
 
-.header-links {
+.aside-links {
    display: block;
 }
