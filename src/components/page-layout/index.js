@@ -1,14 +1,17 @@
 import React from 'react'
 import Header from '../header'
 import Footer from '../footer'
+import Aside from '../aside'
+import styles from './index.module.css'
 
 const PageLayout = (props) => {
    return (
-      <div>
+      <div className={styles.app}>
          <Header />
-
-         <div>{props.children}</div>
-
+         <div className={styles.container}>
+            <Aside />
+            <div className={styles['inner-container']}>{props.children}</div>
+         </div>
          <Footer />
       </div>
    )

@@ -1,0 +1,10 @@
+.navigation {
+   overflow: hidden;
+   background-color: #333;
+   background-image: linear-gradient(to top, rgb(47, 0, 255), #06f0c9);
+   width: 10%;
+}
+
+.header-links {
+   display: block;
+}
