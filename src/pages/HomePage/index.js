@@ -6,9 +6,7 @@ import computer from '../../images/computer (1).svg'
 const HomePage = () => {
    return (
       <PageLayout>
-         <div className={styles.background}>
-            {/* <img src={computer} alt='React Logo' className={styles.image} /> */}
-         </div>
+         <div className={styles.container}></div>
       </PageLayout>
    )
 }
