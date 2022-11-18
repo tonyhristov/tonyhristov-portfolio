@@ -1,27 +1,28 @@
-import React from 'react'
-import LinkComponent from '../link'
+import React, {useState} from 'react'
 import getLinks from '../../utils/navigation'
-import styles from './index.module.css'
+import styled from "styled-components"
+import NavBarLink from "../navLink";
 
 const Header = () => {
    const links = getLinks
 
    return (
-      <header className={styles.navigation}>
-         <div className={styles['header-links']}>
-            {links.map((navElement) => {
-               return (
-                  <LinkComponent
-                     key={navElement.title}
-                     href={navElement.link}
-                     title={navElement.title}
-                     type={'header'}
-                  />
-               )
-            })}
-         </div>
-      </header>
+      <Nav>
+         {links.map(link => (
+             <NavBarLink  props={link}/>
+            ))}
+      </Nav>
    )
 }
+
+const Nav = styled.nav`
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   
+   overflow: hidden;
+   background-color: #000000;
+`
 
 export default Header

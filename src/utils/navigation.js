@@ -1,23 +1,27 @@
 const getLinks = [
    {
-      title: 'Education',
-      link: '/education',
+      title: 'Home',
+      link: '/',
+   },
+   {
+      title: 'About Me',
+      link: '/about',
    },
    {
       title: 'Experience',
       link: '/experience',
    },
    {
-      title: 'Antonio Hristov',
-      link: '/',
+      title: 'Education',
+      link: '/education',
    },
    {
       title: 'Projects',
       link: '/projects',
    },
    {
-      title: 'Media',
-      link: '/media',
+      title: 'Contact Me',
+      link: '/contact',
    },
 ]
 
