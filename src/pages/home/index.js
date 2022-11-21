@@ -6,17 +6,26 @@ import Header from "../../components/header";
 
 const Home = () => {
     return (
-        <Wrapper >
-            <Logo src={logo} alt="Logo" />;
+        <Wrapper>
+            <BackgroundLogo>
+                <Logo src={logo} alt="Logo" />;
+            </BackgroundLogo>
+
+            <h1>Antonio Hristov</h1>
         </Wrapper>
 
     )
 }
 
-
-
 const Wrapper = styled.div`
-background-color: #f35626;
+  //   display: flex;
+  // justify-content: space-between;
+  display: inline-block;
+  // height: 100%;
+`
+
+const BackgroundLogo = styled.div`
+    background-color: #f35626;
     background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
     -webkit-animation: ${hue} 10s infinite linear;
     width: 500px;

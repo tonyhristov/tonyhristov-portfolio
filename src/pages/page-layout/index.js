@@ -19,7 +19,7 @@ const PageLayout = (props) => {
 const Container =styled.div`
     display: inline-block;
     width: 100%;
-    height: auto;
+    height: calc(100vh - 10px);
 `
 
 export default PageLayout
