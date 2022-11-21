@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client';
 import './index.css'
 import App from './App'
-import PageLayout from "./components/page-layout";
+import PageLayout from "./pages/page-layout";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

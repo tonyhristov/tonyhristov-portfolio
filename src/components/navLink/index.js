@@ -1,5 +1,6 @@
 import React from 'react'
-import styled, {keyframes} from "styled-components"
+import styled from "styled-components"
+import hue from "../../constants/hue";
 
 const NavBarLink = ({props}) => (
     <NavLink href={props.link}>
@@ -15,14 +16,6 @@ const NavLink = styled.a`
       
     }
 `
-const hue = keyframes`
- from {
-   -webkit-filter: hue-rotate(0deg);
- }
- to {
-   -webkit-filter: hue-rotate(-360deg);
- }
-`;
 const AnimatedGradientText = styled.h1`
   color: #f35626;
   background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
