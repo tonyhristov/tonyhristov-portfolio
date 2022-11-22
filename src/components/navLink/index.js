@@ -14,15 +14,15 @@ const NavLink = styled.a`
   
    &:hover {
       
-    }
+   }
 `
 const AnimatedGradientText = styled.h1`
-  color: #f35626;
-  background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-animation: ${hue} 10s infinite linear;
-  font-size: 1rem;
+    color: #f35626;
+    background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: ${hue} 10s infinite linear;
+    font-size: 2vh;
 `
 
 export default NavBarLink

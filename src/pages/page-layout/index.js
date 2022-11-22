@@ -11,7 +11,6 @@ const PageLayout = (props) => {
             <Container >
                 <Home/>
             </Container>
-            {/*<Footer/>*/}
         </div>
     )
 }
@@ -19,7 +18,8 @@ const PageLayout = (props) => {
 const Container =styled.div`
     display: inline-block;
     width: 100%;
-    height: calc(100vh - 10px);
+    // height: calc(100vh - 10px);
+    height: 100vh;
 `
 
 export default PageLayout
