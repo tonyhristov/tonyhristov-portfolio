@@ -1,6 +1,6 @@
 # Personal Portfolio Website <img src="https://github.com/tonyhristov/tonyhristov-portfolio/blob/main/public/favicon.ico" width="45" height="45"/>
 
-⚡ Build with **JavaScript**, **React.JSs**, **Styled Components\* and **Framer-Motion\*\*.
+⚡ Build with **JavaScript**, **React.JS**, **Styled Components** and **Framer-Motion**.
 
 ## How to run the project
 
