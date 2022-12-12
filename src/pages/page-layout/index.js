@@ -1,25 +1,27 @@
 import React from 'react'
 import Header from '../../components/header'
-import Footer from '../../components/footer'
 import styled from "styled-components";
 import Home from "../home";
+import About from "../about";
 
 const PageLayout = (props) => {
     return (
-        <div >
+        <div>
             <Header/>
-            <Container >
+            <Container>
                 <Home/>
+            </Container>
+            <Container>
+                <About/>
             </Container>
         </div>
     )
 }
 
-const Container =styled.div`
-    display: inline-block;
+const Container = styled.div`
     width: 100%;
-    // height: calc(100vh - 10px);
-    height: 100vh;
+    height: calc(100vh - 10px);
+    
 `
 
 export default PageLayout

@@ -1,13 +1,38 @@
-import React from "react";
-import styled from "styled-components";
-import logo from "../../images/home.png"
-import hue from "../../constants/hue"
+import React, { useRef } from 'react';
+import styled from 'styled-components';
+import logo from '../../images/home.png';
+import hue from '../../constants/hue';
+import { motion } from 'framer-motion';
 
-const HomeLogo = () => (
-    <BackgroundLogo>
-        <Logo src={logo} alt="Logo"/>;
-    </BackgroundLogo>
-)
+const HomeLogo = () => {
+    const constraintsRef = useRef(null);
+    return (
+        <DragContainer ref={constraintsRef} key='drag-container'>
+            <DragItem drag dragConstraints={constraintsRef} key='drag-item'>
+                <BackgroundLogo key='background-logo'>
+                    <Logo src={logo} alt='Logo' />;
+                </BackgroundLogo>
+            </DragItem>
+        </DragContainer>
+    );
+};
+
+const DragContainer = styled(motion.div)`
+    width: 55vh;
+    height: 55vh;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    background: rgba(255, 255, 255);
+    border-radius: 50%;
+`;
+
+const DragItem = styled(motion.div)`
+    width: 50vh;
+    height: 50vh;
+    border-radius: inherit;
+`;
 
 const BackgroundLogo = styled.div`
     background-color: #f35626;
@@ -18,16 +43,17 @@ const BackgroundLogo = styled.div`
     position: relative;
     overflow: hidden;
     border-radius: 50%;
-`
+`;
 
-const Logo = styled.img`
-    width: 125%;
-    height: 125%;
+const Logo = styled.div`
+    background-image: url(${logo});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 140%;
     position: relative;
     overflow: hidden;
-    border-radius: 50%;
-    margin-top: -9vh;
-    margin-left:-7vh
-`
+    height: 108%;
+    width: 100%;
+`;
 
-export default HomeLogo
+export default HomeLogo;
