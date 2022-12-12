@@ -1,21 +1,20 @@
-import React from 'react'
-import styled from "styled-components"
-import hue from "../../constants/hue";
+import React from 'react';
+import styled from 'styled-components';
+import hue from '../../constants/hue';
 
-const NavBarLink = ({props}) => (
+const NavBarLink = ({ props }) => (
     <NavLink href={props.link}>
         <AnimatedGradientText>{props.title}</AnimatedGradientText>
     </NavLink>
-)
+);
 
 const NavLink = styled.a`
-   padding: 14px 16px;
-   text-decoration: none;
-  
-   &:hover {
-      
-   }
-`
+    padding: 14px 16px;
+    text-decoration: none;
+
+    &:hover {
+    }
+`;
 const AnimatedGradientText = styled.h1`
     color: #f35626;
     background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
@@ -23,6 +22,6 @@ const AnimatedGradientText = styled.h1`
     -webkit-text-fill-color: transparent;
     -webkit-animation: ${hue} 10s infinite linear;
     font-size: 2vh;
-`
+`;
 
-export default NavBarLink
+export default NavBarLink;
