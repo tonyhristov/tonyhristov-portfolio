@@ -10,7 +10,7 @@ const HomeLogo = () => {
         <DragContainer ref={constraintsRef} key='drag-container'>
             <DragItem drag dragConstraints={constraintsRef} key='drag-item'>
                 <BackgroundLogo key='background-logo'>
-                    <Logo src={logo} alt='Logo' />;
+                    <Logo />;
                 </BackgroundLogo>
             </DragItem>
         </DragContainer>
