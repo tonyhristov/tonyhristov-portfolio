@@ -20,7 +20,7 @@ const About = () => {
             </Summary>
             <InnerWrapper>
                 <Info>
-                    My profession is also my hobby. But If I am not coding, I am driving or taking pictures. And yes, my other hobbies are photography and cars. I love to say that I am a passionate
+                    My profession is also my hobby. But when I am not coding, I am driving or taking pictures. And yes, my other hobbies are photography and cars. I love to say that I am a passionate
                     software engineer, photography lover, and petrolhead. Fully dedicated to all roles
                 </Info>
                 <ImageContainer>
@@ -48,26 +48,26 @@ const Summary = styled.p`
     color: white;
     max-width: 1000px;
     line-height: 28px;
-    font-size: 18px;
+    font-size: 21px;
+    margin: 0 auto;
 `;
 
 const Container = styled.div`
     display: flex;
     flex-direction: column;
-    margin: 100px 0;
+    margin: 0;
 `;
 const InnerWrapper = styled.div`
     max-width: 1000px;
-    max-width: 1000px;
+    margin: 5% auto 0%;
 `;
 
 const Info = styled.div`
     display: inline-block;
-    width: 50%;
-    padding-right: 30px;
-    padding-top: 60px;
+    width: 47%;
+    padding-top: 90px;
     color: white;
-    font-size: 18px;
+    font-size: 21px;
     line-height: 28px;
     vertical-align: top;
     text-align: center;
