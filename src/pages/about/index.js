@@ -2,10 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import hue from '../../constants/hue';
 import about from '../../images/about.jpg';
+import Dots from '../../components/dots';
 
 const About = () => {
     return (
         <Container>
+            <Dots />
+
             <Title>About Me</Title>
             <Summary>
                 HI! My name is Antonio, but most of the people call me Tony, you can do it as well! Let me tell you my story :)
