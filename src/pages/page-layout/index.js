@@ -1,13 +1,13 @@
 import React from 'react';
-import Header from '../../components/header';
 import styled from 'styled-components';
 import Home from '../home';
 import About from '../about';
+import Navbar from '../../components/navbar';
 
 const PageLayout = (props) => {
     return (
         <div>
-            <Header />
+            <Navbar />
             <Container>
                 <Home />
             </Container>
