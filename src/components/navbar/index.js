@@ -1,9 +1,8 @@
 import { useState } from 'react';
-import styles from './styles.module.css';
 import styled from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import logo from '../../images/Logo-transparent.png';
 import hue from '../../constants/hue';
-// import NavBarLink from '../navLink';
 
 function Navbar() {
     // adding the states
@@ -20,32 +19,37 @@ function Navbar() {
     };
 
     return (
-        <Nav className={`${styles.navbar}`}>
+        <Nav>
+            <GlobalStyle />
             <GradientLogoFiller key='background-logo'>
                 <Logo src={logo} />;
             </GradientLogoFiller>
 
-            <ul className={`${styles.navMenu} ${isActive ? styles.active : ''}`}>
+            <NavMenu opened={isActive}>
                 <AnimatedGradientText onClick={removeActive}>
-                    <NavLink href='#home' className={`${styles.navLink}`}>
-                        Home
-                    </NavLink>
+                    <NavLink href='#home'>Home</NavLink>
                 </AnimatedGradientText>
                 <AnimatedGradientText onClick={removeActive}>
-                    <NavLink href='#about' className={`${styles.navLink}`}>
-                        About
-                    </NavLink>
+                    <NavLink href='#about'>About</NavLink>
                 </AnimatedGradientText>
-            </ul>
+            </NavMenu>
 
-            <div className={`${styles.hamburger} ${isActive ? styles.active : ''}`} onClick={toggleActiveClass}>
-                <Bar />
-                <Bar />
-                <Bar />
-            </div>
+            <Hamburger opened={isActive} onClick={toggleActiveClass}>
+                <Bar></Bar>
+                <Bar></Bar>
+                <Bar></Bar>
+            </Hamburger>
         </Nav>
     );
 }
+
+const GlobalStyle = createGlobalStyle`
+   * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+`;
 
 const Nav = styled.nav`
     padding: 10px 20px;
@@ -56,30 +60,6 @@ const Nav = styled.nav`
     gap: 40px;
     min-height: 70px;
     background-color: #000000;
-`;
-
-// const navMenu = styled.ul`
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     gap: 60px;
-// `;
-
-// const Hamburger = styled.div`
-//     display: block;
-//     cursor: pointer;
-// `;
-
-const Bar = styled.span`
-    @media screen and (max-width: 780px) {
-        background-color: white;
-        width: 20px;
-        height: 3px;
-        display: block;
-        margin: 5px;
-        -webkit-transition: 0.3s ease-in-out;
-        transition: 0.3s ease-in-out;
-    }
 `;
 
 const GradientLogoFiller = styled.div`
@@ -98,14 +78,7 @@ const Logo = styled.img`
     object-fit: fill;
 `;
 
-const NavLink = styled.a`
-    padding: 14px 16px;
-    text-decoration: none;
-
-    &:hover {
-    }
-`;
-const AnimatedGradientText = styled.h1`
+const AnimatedGradientText = styled.li`
     color: #f35626;
     background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
     -webkit-background-clip: text;
@@ -113,6 +86,63 @@ const AnimatedGradientText = styled.h1`
     -webkit-animation: ${hue} 10s infinite linear;
     font-size: 2vh;
     margin: 16px 0;
+`;
+
+const NavLink = styled.a`
+    text-decoration: none;
+    font-size: 18px;
+`;
+
+const NavMenu = styled.ul`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    list-style: none;
+
+    @media screen and (max-width: 780px) {
+        position: absolute;
+        flex-direction: column;
+        gap: 0;
+        top: 70px;
+        left: ${(props) => (props.opened ? '0' : '-100%')};
+        text-align: start;
+        width: 100%;
+        transition: 0.7s ease-in-out;
+        background-color: #000000;
+        padding: 10px;
+    }
+`;
+
+const Bar = styled.span`
+    @media screen and (max-width: 780px) {
+        background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+        width: 20px;
+        height: 3px;
+        display: block;
+        margin: 5px;
+        -webkit-transition: 0.3s ease-in-out;
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: ${hue} 10s infinite linear;
+        transition: 0.3s ease-in-out;
+    }
+`;
+
+const Hamburger = styled.div`
+    @media screen and (max-width: 780px) {
+        display: block;
+        cursor: pointer;
+
+        ${Bar}:nth-child(1) {
+            transform: ${(props) => (props.opened ? 'translateY(8px) rotate(45deg)' : '')};
+        }
+        ${Bar}:nth-child(2) {
+            opacity: ${(props) => (props.opened ? 0 : 100)};
+        }
+        ${Bar}:nth-child(3) {
+            transform: ${(props) => (props.opened ? 'translateY(-8px) rotate(-45deg)' : '')};
+        }
+    }
 `;
 
 export default Navbar;
