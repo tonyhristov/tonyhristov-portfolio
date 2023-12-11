@@ -11,9 +11,9 @@ const PageLayout = (props) => {
             <Container>
                 <Home />
             </Container>
-            {/* <Container id={'about'}>
+            <Container id={'about'}>
                 <About />
-            </Container> */}
+            </Container>
         </div>
     );
 };
