@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import logo from '../../images/home.png';
 import hue from '../../constants/hue';
 import { motion } from 'framer-motion';
-import HomeContainer from '../homeContainer';
 
 const HomeLogo = () => {
     const constraintsRef = useRef(null);
