@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
 import hue from '../../constants/hue';
 import about from '../../images/about.jpg';
 import Dots from '../../components/dots';
+import useWindowSize from '../../constants/resize';
 
 const About = () => {
+    const container = useRef(null);
+
+    const size = useWindowSize(container);
+
     return (
-        <Container>
-            <Dots />
+        <Container ref={container}>
+            <Dots size={size} />
 
             <Title>About Me</Title>
             <Summary>
