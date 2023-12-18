@@ -1,13 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import spawnDots from '../../constants/dotsBackground';
 
-const Dots = () => {
+const Dots = (params) => {
     const canvasRef = useRef(null);
-    const container = useRef(null);
 
-    const [width, setWidth] = useState(window.innerWidth);
-    const [height, setHeight] = useState(window.innerHeight);
+    const [width, height] = params.size;
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -16,16 +14,11 @@ const Dots = () => {
         const ctx = canvas.getContext('2d');
         if (!ctx) return;
 
-        window.addEventListener('resize', () => {
-            setWidth(container.current.parentElement.offsetWidth);
-            setHeight(container.current.parentElement.offsetHeight);
-        });
-
         spawnDots({ canvas, ctx, width, height });
     }, [width, height]);
 
     return (
-        <Container ref={container}>
+        <Container>
             <Canvas id='stage' ref={canvasRef}></Canvas>
         </Container>
     );
