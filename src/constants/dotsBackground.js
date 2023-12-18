@@ -1,7 +1,7 @@
 const spawnDots = (params) => {
     const { canvas, ctx, height = window.innerHeight, width = window.innerWidth } = params;
 
-    canvas.width = width - 10;
+    canvas.width = width;
     canvas.height = height - 10;
 
     const dots = [],
