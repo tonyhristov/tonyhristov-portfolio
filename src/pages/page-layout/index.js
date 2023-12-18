@@ -21,6 +21,11 @@ const PageLayout = (props) => {
 const Container = styled.div`
     width: 100%;
     height: calc(100vh - 10px);
+
+    @media screen and (max-width: 900px) {
+        margin-top: 120px;
+        height: auto;
+    }
 `;
 
 export default PageLayout;
