@@ -83,6 +83,7 @@ const Title = styled.h1`
     font-size: 7vh;
     text-align: center;
 `;
+
 const Summary = styled.p`
     text-align: center;
     color: white;

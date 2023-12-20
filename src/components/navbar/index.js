@@ -32,6 +32,9 @@ function Navbar() {
                 <AnimatedGradientText onClick={removeActive}>
                     <NavLink href='#about'>About</NavLink>
                 </AnimatedGradientText>
+                <AnimatedGradientText onClick={removeActive}>
+                    <NavLink href='#education'>Education</NavLink>
+                </AnimatedGradientText>
             </NavMenu>
 
             <Hamburger opened={isActive} onClick={toggleActiveClass}>
