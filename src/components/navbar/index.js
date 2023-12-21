@@ -32,6 +32,9 @@ function Navbar() {
                 <AnimatedGradientText onClick={removeActive}>
                     <NavLink href='#about'>About</NavLink>
                 </AnimatedGradientText>
+                <AnimatedGradientText onClick={removeActive}>
+                    <NavLink href='#education'>Education</NavLink>
+                </AnimatedGradientText>
             </NavMenu>
 
             <Hamburger opened={isActive} onClick={toggleActiveClass}>
@@ -111,6 +114,7 @@ const NavMenu = styled.ul`
         transition: 0.7s ease-in-out;
         background-color: #000000;
         padding: 10px;
+        z-index: 1;
     }
 `;
 

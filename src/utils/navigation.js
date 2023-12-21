@@ -11,10 +11,10 @@ const getLinks = [
     //    title: 'Experience',
     //    link: '/experience',
     // },
-    // {
-    //    title: 'Education',
-    //    link: '/education',
-    // },
+    {
+        title: 'Education',
+        link: '/education',
+    },
     // {
     //    title: 'Projects',
     //    link: '/projects',
