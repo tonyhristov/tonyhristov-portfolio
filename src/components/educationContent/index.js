@@ -28,7 +28,7 @@ const Container = styled.div`
         height: 19px;
 
         left: ${(props) => (props.isLeft ? '' : '-10px')};
-        right: ${(props) => (props.isLeft ? '-3.27%' : '')};
+        right: ${(props) => (props.isLeft ? '-2.27%' : '')};
 
         background-color: white;
         border: 4px solid cyan;

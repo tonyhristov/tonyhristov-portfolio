@@ -23,11 +23,12 @@ const Education = () => {
 const Container = styled.div`
     display: flex;
     flex-direction: column;
+    margin: 0;
 `;
 
 const Timeline = styled.div`
     position: relative;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: 5%;
 
     &:after {
