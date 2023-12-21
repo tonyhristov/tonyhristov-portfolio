@@ -27,8 +27,8 @@ const Container = styled.div`
         width: 19px;
         height: 19px;
 
-        left: ${(props) => (props.isLeft ? '' : '-9px')};
-        right: ${(props) => (props.isLeft ? '-17px' : '')};
+        left: ${(props) => (props.isLeft ? '' : '-10px')};
+        right: ${(props) => (props.isLeft ? '-3.27%' : '')};
 
         background-color: white;
         border: 4px solid cyan;
@@ -52,7 +52,7 @@ const Container = styled.div`
         }
 
         &:after {
-            left: -8px;
+            left: -10px;
         }
     }
 `;

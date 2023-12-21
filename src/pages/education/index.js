@@ -8,24 +8,27 @@ const Education = () => {
     const { Lomonosov, SoftUni, UNWE } = educationInfo;
 
     return (
-        <div>
+        <Container>
             <Title>Education</Title>
 
-            <div>
-                <Timeline>
-                    <EducationContent name={Lomonosov.name} degree={Lomonosov.degree} timePeriod={Lomonosov.timePeriod} />
-                    <EducationContent name={SoftUni.name} degree={SoftUni.degree} timePeriod={SoftUni.timePeriod} isLeft={false} />
-                    <EducationContent name={UNWE.name} degree={UNWE.degree} timePeriod={UNWE.timePeriod} />
-                </Timeline>
-            </div>
-        </div>
+            <Timeline>
+                <EducationContent name={Lomonosov.name} degree={Lomonosov.degree} timePeriod={Lomonosov.timePeriod} />
+                <EducationContent name={SoftUni.name} degree={SoftUni.degree} timePeriod={SoftUni.timePeriod} isLeft={false} />
+                <EducationContent name={UNWE.name} degree={UNWE.degree} timePeriod={UNWE.timePeriod} />
+            </Timeline>
+        </Container>
     );
 };
+
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
 
 const Timeline = styled.div`
     position: relative;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 5%;
 
     &:after {
         content: '';
