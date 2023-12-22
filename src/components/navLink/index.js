@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import hue from '../../constants/hue';
+import hue from '../../utils/hue';
 
 const NavBarLink = ({ props }) => (
     <NavLink href={props.link}>

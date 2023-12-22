@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
-import hue from '../../constants/hue';
+import hue from '../../utils/hue';
 import EducationContent from '../../components/educationContent';
 import educationInfo from '../../constants/education';
 import TimeLine from '../../components/timeline';

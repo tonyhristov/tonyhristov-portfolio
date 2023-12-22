@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
-import hue from '../../constants/hue';
+import hue from '../../utils/hue';
 import about from '../../images/about.jpg';
 import Dots from '../../components/dots';
 import useWindowSize from '../../utils/useWindowSize';

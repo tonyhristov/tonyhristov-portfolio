@@ -7,10 +7,10 @@ const getLinks = [
         title: 'About Me',
         link: '#about',
     },
-    // {
-    //    title: 'Experience',
-    //    link: '/experience',
-    // },
+    {
+        title: 'Work Experience',
+        link: '/work-experience',
+    },
     {
         title: 'Education',
         link: '/education',

@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
 import logo from '../../images/home.png';
-import hue from '../../constants/hue';
+import hue from '../../utils/hue';
 import { motion } from 'framer-motion';
 
 const HomeLogo = () => {
