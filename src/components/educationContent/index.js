@@ -21,39 +21,11 @@ const Container = styled.div`
     width: 50%;
     left: ${(props) => (props.isLeft ? '0' : '50%')};
 
-    &:after {
-        content: '';
-        position: absolute;
-        width: 19px;
-        height: 19px;
-
-        left: ${(props) => (props.isLeft ? '' : '-10px')};
-        right: ${(props) => (props.isLeft ? '-2.27%' : '')};
-
-        background-color: white;
-        border: 4px solid cyan;
-        top: -3px;
-        border-radius: 50%;
-        z-index: 1;
-    }
-
     @media screen and (max-width: 600px) {
-        width: 100%;
-        padding-left: 20px;
+        padding-left: 40px;
         padding-right: 0px;
-
-        left: ${(props) => (props.isLeft ? '' : '0%')};
-
-        &:before {
-            left: 60px;
-            border: medium solid white;
-            border-width: 10px 10px 10px 0;
-            border-color: transparent white transparent transparent;
-        }
-
-        &:after {
-            left: -10px;
-        }
+        width: auto;
+        position: static;
     }
 `;
 
@@ -68,7 +40,7 @@ const Content = styled.div`
 
     text-align: ${(props) => (props.isLeft ? 'right' : 'left')};
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 900px) {
         text-align: left;
     }
 `;
