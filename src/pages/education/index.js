@@ -9,8 +9,6 @@ import useResizableHeight from '../../utils/useResizableHeight';
 const Education = () => {
     const { Lomonosov, SoftUni, UNWE } = educationInfo;
 
-    console.log(educationInfo);
-
     const container = useRef(null);
 
     const height = useResizableHeight(container);
