@@ -26,7 +26,6 @@ const WorkExperience = () => {
                         positionDescription={Evolution.positionDescription}
                         companyDescription={Evolution.companyDescription}
                         timePeriod={Evolution.timePeriod}
-                        isLeft={false}
                     />
                     <WorkContent
                         companyName={OddStorm.companyName}
@@ -34,6 +33,7 @@ const WorkExperience = () => {
                         positionDescription={OddStorm.positionDescription}
                         companyDescription={OddStorm.companyDescription}
                         timePeriod={OddStorm.timePeriod}
+                        isLeft={false}
                     />
                     <WorkContent
                         companyName={SoftUni.companyName}
@@ -41,7 +41,6 @@ const WorkExperience = () => {
                         positionDescription={SoftUni.positionDescription}
                         companyDescription={SoftUni.companyDescription}
                         timePeriod={SoftUni.timePeriod}
-                        isLeft={false}
                     />
                 </div>
             </TimelineContainer>

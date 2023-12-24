@@ -1,6 +1,6 @@
 const workExperienceInfo = {
     Evolution: {
-        companyName: 'Software University (SoftUni)',
+        companyName: 'Evolution',
         title: `Front-end Game Developer`,
         companyDescription: 'Evolution is a leading B2B solution provider for casino operators offering a live casino, live game shows, slots, and more',
         positionDescription: 'Developing slot games for NetEnt and RedTiger.',

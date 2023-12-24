@@ -20,9 +20,9 @@ const Education = () => {
             <TimelineContainer ref={container}>
                 <TimeLine height={height} />
                 <div>
-                    <EducationContent name={Lomonosov.name} degree={Lomonosov.degree} timePeriod={Lomonosov.timePeriod} />
-                    <EducationContent name={SoftUni.name} degree={SoftUni.degree} timePeriod={SoftUni.timePeriod} isLeft={false} />
-                    <EducationContent name={UNWE.name} degree={UNWE.degree} timePeriod={UNWE.timePeriod} />
+                    <EducationContent name={Lomonosov.name} degree={Lomonosov.degree} timePeriod={Lomonosov.timePeriod} isLeft={false} />
+                    <EducationContent name={SoftUni.name} degree={SoftUni.degree} timePeriod={SoftUni.timePeriod} />
+                    <EducationContent name={UNWE.name} degree={UNWE.degree} timePeriod={UNWE.timePeriod} isLeft={false} />
                 </div>
             </TimelineContainer>
         </Container>
