@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
 import logo from '../../images/Logo-transparent.png';
-import hue from '../../constants/hue';
+import hue from '../../utils/hue';
 
 function Navbar() {
     // adding the states
@@ -31,6 +31,12 @@ function Navbar() {
                 </AnimatedGradientText>
                 <AnimatedGradientText onClick={removeActive}>
                     <NavLink href='#about'>About</NavLink>
+                </AnimatedGradientText>
+                <AnimatedGradientText onClick={removeActive}>
+                    <NavLink href='#work-experience'>Work Experience</NavLink>
+                </AnimatedGradientText>
+                <AnimatedGradientText onClick={removeActive}>
+                    <NavLink href='#education'>Education</NavLink>
                 </AnimatedGradientText>
             </NavMenu>
 
@@ -111,6 +117,7 @@ const NavMenu = styled.ul`
         transition: 0.7s ease-in-out;
         background-color: #000000;
         padding: 10px;
+        z-index: 1;
     }
 `;
 

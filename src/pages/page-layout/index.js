@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import Home from '../home';
 import About from '../about';
 import Navbar from '../../components/navbar';
+import Education from '../education';
+import WorkExperience from '../work-experience';
 
 const PageLayout = (props) => {
     return (
@@ -13,6 +15,12 @@ const PageLayout = (props) => {
             </Container>
             <Container id={'about'}>
                 <About />
+            </Container>
+            <Container id={'work-experience'}>
+                <WorkExperience />
+            </Container>
+            <Container id={'education'}>
+                <Education />
             </Container>
         </div>
     );
