@@ -18,7 +18,7 @@ const WorkExperience = () => {
             <Title>Work Experience</Title>
 
             <TimelineContainer ref={container}>
-                <TimeLine height={height} />
+                <TimeLine height={height} type={'work'} />
                 <div>
                     <WorkContent
                         companyName={Evolution.companyName}
@@ -59,8 +59,6 @@ const TimelineContainer = styled.div`
     margin: 5%;
 
     @media screen and (max-width: 900px) {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
         grid-gap: 20px;
     }
 `;

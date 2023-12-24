@@ -2,13 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 const EducationContent = (props) => {
-    const { name, degree, timePeriod, isLeft = true } = props;
+    const { name, degree, degreeDescription, timePeriod, isLeft = true } = props;
 
     return (
         <Container isLeft={isLeft}>
             <Content isLeft={isLeft}>
                 <PrimaryText>{name}</PrimaryText>
                 <Degree>{degree}</Degree>
+                <DegreeDescription>{degreeDescription}</DegreeDescription>
                 <PrimaryText>{timePeriod}</PrimaryText>
             </Content>
         </Container>
@@ -55,6 +56,11 @@ const Degree = styled.div`
     font-weight: 500;
     font-size: 1.5rem;
     color: white;
+    margin-bottom: 1rem;
+`;
+
+const DegreeDescription = styled.div`
+    color: cyan;
     margin-bottom: 1rem;
 `;
 

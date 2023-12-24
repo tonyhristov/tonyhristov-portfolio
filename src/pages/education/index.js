@@ -9,6 +9,8 @@ import useResizableHeight from '../../utils/useResizableHeight';
 const Education = () => {
     const { Lomonosov, SoftUni, UNWE } = educationInfo;
 
+    console.log(educationInfo);
+
     const container = useRef(null);
 
     const height = useResizableHeight(container);
@@ -18,11 +20,11 @@ const Education = () => {
             <Title>Education</Title>
 
             <TimelineContainer ref={container}>
-                <TimeLine height={height} />
+                <TimeLine height={height} type={'education'} />
                 <div>
-                    <EducationContent name={Lomonosov.name} degree={Lomonosov.degree} timePeriod={Lomonosov.timePeriod} isLeft={false} />
-                    <EducationContent name={SoftUni.name} degree={SoftUni.degree} timePeriod={SoftUni.timePeriod} />
-                    <EducationContent name={UNWE.name} degree={UNWE.degree} timePeriod={UNWE.timePeriod} isLeft={false} />
+                    <EducationContent name={Lomonosov.name} degree={Lomonosov.degree} degreeDescription={Lomonosov.degreeDescription} timePeriod={Lomonosov.timePeriod} isLeft={false} />
+                    <EducationContent name={SoftUni.name} degree={SoftUni.degree} degreeDescription={SoftUni.degreeDescription} timePeriod={SoftUni.timePeriod} />
+                    <EducationContent name={UNWE.name} degree={UNWE.degree} degreeDescription={UNWE.degreeDescription} timePeriod={UNWE.timePeriod} isLeft={false} />
                 </div>
             </TimelineContainer>
         </Container>
@@ -40,8 +42,6 @@ const TimelineContainer = styled.div`
     margin: 5%;
 
     @media screen and (max-width: 900px) {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
         grid-gap: 20px;
     }
 `;

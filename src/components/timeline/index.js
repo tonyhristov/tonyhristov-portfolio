@@ -3,14 +3,18 @@ import styled from 'styled-components';
 
 const TimeLine = (params) => {
     const dotsHeightDividedByNumberOfDots = params.height / 3;
-    const getPercentage = window.innerWidth < 900 ? 15 : 23;
-    const percentageOfDotsHeight = (getPercentage / 100) * dotsHeightDividedByNumberOfDots;
+    const getPercentageEducation = window.innerWidth < 900 ? 1 : 23;
+    const getPercentageWork = window.innerWidth < 900 ? 17 : 27;
+
+    const getPercentageBasedOnType = params.type === 'work' ? getPercentageWork : getPercentageEducation;
+
+    const percentageOfDotsHeight = (getPercentageBasedOnType / 100) * dotsHeightDividedByNumberOfDots;
 
     return (
         <Line heightSize={params.height}>
-            <Dot pos={params.height / 3 - percentageOfDotsHeight} />
-            <Dot pos={params.height / 3 - percentageOfDotsHeight} />
-            <Dot pos={params.height / 3 - percentageOfDotsHeight} />
+            <Dot pos={dotsHeightDividedByNumberOfDots - percentageOfDotsHeight} />
+            <Dot pos={dotsHeightDividedByNumberOfDots} />
+            <Dot pos={dotsHeightDividedByNumberOfDots - percentageOfDotsHeight} />
         </Line>
     );
 };
