@@ -1,15 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const EducationContent = (props) => {
-    const { name, degree, degreeDescription, timePeriod, isLeft = true } = props;
+const WorkContent = (props) => {
+    const { companyName, title, positionDescription, companyDescription, timePeriod, isLeft = true } = props;
 
     return (
         <Container isLeft={isLeft}>
             <Content isLeft={isLeft}>
-                <PrimaryText>{name}</PrimaryText>
-                <Degree>{degree}</Degree>
-                <DegreeDescription>{degreeDescription}</DegreeDescription>
+                <PrimaryText>{companyName}</PrimaryText>
+                <Title>{title}</Title>
+                <CompanyDescription>{companyDescription}</CompanyDescription>
+                <PositionDescription>{positionDescription}</PositionDescription>
                 <PrimaryText>{timePeriod}</PrimaryText>
             </Content>
         </Container>
@@ -51,7 +52,7 @@ const PrimaryText = styled.h3`
     margin-bottom: 0;
 `;
 
-const Degree = styled.div`
+const Title = styled.div`
     text-transform: uppercase;
     font-weight: 500;
     font-size: 1.5rem;
@@ -59,9 +60,14 @@ const Degree = styled.div`
     margin-bottom: 1rem;
 `;
 
-const DegreeDescription = styled.div`
+const CompanyDescription = styled.div`
     color: cyan;
     margin-bottom: 1rem;
 `;
 
-export default EducationContent;
+const PositionDescription = styled.div`
+    color: white;
+    margin-bottom: 1rem;
+`;
+
+export default WorkContent;

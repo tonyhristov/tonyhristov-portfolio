@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import spawnDots from '../../constants/dotsBackground';
+import spawnDots from '../../utils/dotsBackground';
 
 const Dots = (params) => {
     const canvasRef = useRef(null);

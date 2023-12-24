@@ -1,21 +1,32 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
-import hue from '../../constants/hue';
+import hue from '../../utils/hue';
 import EducationContent from '../../components/educationContent';
-import educationInfo from '../../utils/education';
+import educationInfo from '../../constants/education';
+import TimeLine from '../../components/timeline';
+import useResizableHeight from '../../utils/useResizableHeight';
 
 const Education = () => {
     const { Lomonosov, SoftUni, UNWE } = educationInfo;
+
+    console.log(educationInfo);
+
+    const container = useRef(null);
+
+    const height = useResizableHeight(container);
 
     return (
         <Container>
             <Title>Education</Title>
 
-            <Timeline>
-                <EducationContent name={Lomonosov.name} degree={Lomonosov.degree} timePeriod={Lomonosov.timePeriod} />
-                <EducationContent name={SoftUni.name} degree={SoftUni.degree} timePeriod={SoftUni.timePeriod} isLeft={false} />
-                <EducationContent name={UNWE.name} degree={UNWE.degree} timePeriod={UNWE.timePeriod} />
-            </Timeline>
+            <TimelineContainer ref={container}>
+                <TimeLine height={height} type={'education'} />
+                <div>
+                    <EducationContent name={Lomonosov.name} degree={Lomonosov.degree} degreeDescription={Lomonosov.degreeDescription} timePeriod={Lomonosov.timePeriod} isLeft={false} />
+                    <EducationContent name={SoftUni.name} degree={SoftUni.degree} degreeDescription={SoftUni.degreeDescription} timePeriod={SoftUni.timePeriod} />
+                    <EducationContent name={UNWE.name} degree={UNWE.degree} degreeDescription={UNWE.degreeDescription} timePeriod={UNWE.timePeriod} isLeft={false} />
+                </div>
+            </TimelineContainer>
         </Container>
     );
 };
@@ -26,25 +37,12 @@ const Container = styled.div`
     margin: 0;
 `;
 
-const Timeline = styled.div`
+const TimelineContainer = styled.div`
     position: relative;
-    /* max-width: 1200px; */
     margin: 5%;
 
-    &:after {
-        content: '';
-        position: absolute;
-        width: 7px;
-        background-color: cyan;
-        top: 0;
-        bottom: 0;
-        left: 50%;
-    }
-
-    @media screen and (max-width: 600px) {
-        &:after {
-            left: 0px;
-        }
+    @media screen and (max-width: 900px) {
+        grid-gap: 20px;
     }
 `;
 
