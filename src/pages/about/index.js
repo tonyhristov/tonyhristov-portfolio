@@ -56,6 +56,7 @@ const ImageContainer = styled.div`
     width: 50%;
     padding-left: 20px;
     position: relative;
+    opacity: 100;
 
     @media screen and (max-width: 900px) {
         padding-left: 0;
