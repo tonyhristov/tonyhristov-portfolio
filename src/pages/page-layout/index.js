@@ -5,11 +5,13 @@ import About from '../about';
 import Navbar from '../../components/navbar';
 import Education from '../education';
 import WorkExperience from '../work-experience';
+import ScrollButton from '../../components/scrollButton';
 
 const PageLayout = (props) => {
     return (
         <div>
             <Navbar />
+            <ScrollButton />
             <Container>
                 <Home />
             </Container>
