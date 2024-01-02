@@ -60,7 +60,6 @@ const GlobalStyle = createGlobalStyle`
 const Nav = styled.nav`
     padding: 10px 20px;
     display: flex;
-    /* justify-content: space-between; */
     justify-content: space-evenly;
     align-items: center;
     gap: 40px;

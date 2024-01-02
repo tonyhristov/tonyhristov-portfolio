@@ -23,7 +23,7 @@ const Container = styled.div`
     width: 50%;
     left: ${(props) => (props.isLeft ? '0' : '50%')};
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 900px) {
         padding-left: 40px;
         padding-right: 0px;
         width: auto;
